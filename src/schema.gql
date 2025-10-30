@@ -1,0 +1,36 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Tags {
+  id: Int!
+  name: String!
+  posts: [Posts!]!
+}
+
+type Posts {
+  id: Int!
+  title: String!
+  constent: String!
+  tags: [Tags!]!
+  user: Users!
+}
+
+type Profiles {
+  id: Int!
+  bio: String!
+  avatar: String!
+  user: Users!
+}
+
+type Users {
+  id: Int!
+  username: String!
+  email: String!
+  profile: Profiles!
+  posts: [Posts!]!
+}
+
+type Query {
+  users: Users!
+}
