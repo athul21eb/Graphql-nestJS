@@ -31,6 +31,6 @@ export class Posts {
   tags: Promise<Tags[]>;
 
   @Field(() => Users)
-  @ManyToOne(() => Users, (user) => user.posts)
+  @ManyToOne(() => Users, (user) => user.posts,{onDelete:"CASCADE"})
   user: Promise<Users>;
 }

@@ -45,6 +45,6 @@ export class Users {
 
   // 2️⃣ One-to-many with Posts
   @Field(() => [Posts])
-  @OneToMany(() => Posts, (post) => post.user, { cascade: true })
+  @OneToMany(() => Posts, (post) => post.user, { cascade: true , onDelete: 'CASCADE',})
   posts: Promise<Posts[]>;
 }

@@ -20,6 +20,8 @@ export class CreateUserInput {
   @Field()
   @IsEmail()
   email: string;
+
+  
    @IsStrongPassword({
     minLength: 3,
     minSymbols: 1,
